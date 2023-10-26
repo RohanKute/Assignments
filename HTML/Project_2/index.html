@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Survey Form</title>
+
+
+</head> 
+<body>
+    <h1 id="title">Customer Survey form<h1>
+    <p id ="description">By taking this survey,you'll help us to improve our product :)</p>
+
+   <form id="#form">
+
+        <label for="name">Name</label>
+        <section class="nameSec">
+                <input id="firstName" placeholder="First name" type="text" value="" required class="info">
+                <input id="lastName" placeholder="Last name" type="text" required class="info">
+        </section>
+                
+        <label for="email">Email</label>
+                <input id="email" placeholder="Enter your email adress" type="email" required class="info" >
+
+        <label for="dob">Date Of Birth</label>
+                <input id="dob" placeholder="Enter your Date Of Birt" type="date"  class="info" required>
+
+        <label for="number">Number</label>
+                <input id="number" placeholder="Phone Number" type="tel" minlength="10" maxlength="10" class="info" pattern="[0-9]*" required>
+
+        <label for="country">Country</label>
+            <select id="country" name="country" class="info" required>
+                <option value="">Select one</option>
+                <option value="other">India</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="France">France</option>
+                <option value="other">other</option>
+            </select>
+    
+        <label for="prof" id="prof">Profession</label>
+                <input id="prof" placeholder="Enter your profession" type="text" required class="info">
+
+        <label for="gender">Gender</label>
+            <section class="genSec">
+                <label><input type="radio" name="gender" value="Male" class="inline">Male</label>
+                <label><input type="radio" name="gender" value="Female" class="inline">Female</label>
+                <label><input type="radio" name="gender" value="Other" class="inline">Other</label>
+          </section>
+
+ 
+        <section class="btnSec">
+                <button  type="submit" class="btn" id="submit">Submit</button>
+                <button  type="reset" class="btn"id="reset">Reset</button>
+        </section>
+
+        <div id="overlay" class="overlay"></div>
+        <div class="popup" id="popup">
+                <section>
+                        <p>First Name:<span></span></p>
+                        <p>Last Name:<span></span></p>
+                        <p>Email:<span></span></p>
+                        <p>Date of Birth:<span></span></p>
+                        <p>Phone Number:<span></span></p>
+                        <p>Country:<span></span></p>
+                        <p>Profession:<span></span></p>
+                        <p>Gender:<span></span></p>
+                        <button type="reset" class="btn close" id="close">Close</button>
+                </section>
+        <div>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
